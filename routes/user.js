@@ -26,4 +26,14 @@ router.post("/details", auth.verify, (req, res) => {
 	userController.getProfile({userId : userData.id}).then(resultFromController => res.send(resultFromController));
 })
 
+//S41 D1 ROUTER - CODE ALONG ACTIVITY
+router.post("/enroll", auth.verify, (req, res) => {
+	let data = {
+		userId : auth.decode(req.headers.authorization).id,
+		courseId : req.body.courseId
+	}
+
+	userController.enroll(data).then(resultFromController => res.send(resultFromController));
+})
+
 module.exports = router;

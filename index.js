@@ -7,7 +7,7 @@ const courseRoutes = require("./routes/course.js")
 const app = express();
 
 //DB Connection
-mongoose.connect("mongodb+srv://earlrafael_:2424Diaz!@cluster0.0dhrt.mongodb.net/course-booking-api-b217?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://admin:admin123@zuitt.qsixkvp.mongodb.net/Course-Booking-API?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
